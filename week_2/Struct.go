@@ -1,7 +1,5 @@
 package week_2
 
-
-
 type Person struct {
 	ID          int
 	Name        string

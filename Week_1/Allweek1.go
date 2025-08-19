@@ -15,10 +15,8 @@ func AllWeek1() {
 	common.PrintByTime(Sum)
 
 	min := MinimumNumberInSlice(Numbers)
-	common.PrintByTime(min)
-
 	max := MaximumNumberInSlice(Numbers)
-	common.PrintByTime(max)
+	common.PrintByTime(min,max)
 	/*
 		minBySlices := slices.Min(Numbers)
 		common.PrintByTime(minBySlices)
