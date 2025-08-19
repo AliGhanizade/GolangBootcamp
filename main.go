@@ -16,7 +16,7 @@ func main() {
 	case 1:
 		week1.AllWeek1()
 	case 2:
-		week2.AllWeek2()
+		week2.SelectResult()
 	
 	}
 }
