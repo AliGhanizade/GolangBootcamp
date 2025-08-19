@@ -15,3 +15,8 @@ func PrintMapString(item map[string]string)  {
 		fmt.Printf("key : %v\t=>\tvalue : %v \n",key,value)
 	}
 }
+func PrintMapStringJustKey(item map[string]string)  {
+	for key, _ := range item {
+		fmt.Printf("key : %v\n",key)
+	}
+}
