@@ -22,7 +22,9 @@ func SelectResult() {
 		capital := FindInMap(countries)
 		common.PrintByTime(capital)
 	case 3:
-		return
+		name := GetInfo()
+		SaveInFile([]byte(name))
+
 	case 4:
 		AllWeek2()
 	}
@@ -40,4 +42,6 @@ func AllWeek2() {
 	capital := FindInMap(countries)
 	common.PrintByTime(capital)
 
+	name := GetInfo()
+	SaveInFile([]byte(name))
 }
