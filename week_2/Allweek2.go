@@ -22,8 +22,14 @@ func SelectResult() {
 		capital := FindInMap(countries)
 		common.PrintByTime(capital)
 	case 3:
-		name := GetInfo()
-		SaveInFile([]byte(name))
+		username := GetInfo()
+		_ = CreateUsername(username)
+		err := CheckUniqUsername(username)
+		if err != nil {
+			fmt.Println(err) 
+			return
+		}
+		
 
 	case 4:
 		AllWeek2()
@@ -42,6 +48,6 @@ func AllWeek2() {
 	capital := FindInMap(countries)
 	common.PrintByTime(capital)
 
-	name := GetInfo()
-	SaveInFile([]byte(name))
+	
+
 }

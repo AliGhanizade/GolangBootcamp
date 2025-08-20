@@ -15,7 +15,7 @@ type Book struct {
 	Year   int
 }
 
-func CreatePerson()	[]Person {
+func CreatePerson() []Person {
 	var Persons []Person
 	Persons = append(Persons, Person{
 		ID:          1,
@@ -35,7 +35,7 @@ func CreatePerson()	[]Person {
 
 }
 
-func CreateBook(Authors []Person) []Book{
+func CreateBook(Authors []Person) []Book {
 	var Books []Book
 	Books = append(Books, Book{
 		ID:     1,
@@ -44,11 +44,10 @@ func CreateBook(Authors []Person) []Book{
 		Year:   2024,
 	})
 	Books = append(Books, Book{
-		ID: 2,
-		Title: "Book2",
+		ID:     2,
+		Title:  "Book2",
 		Author: Authors[1],
-		Year: 2024,
+		Year:   2024,
 	})
 	return Books
 }
-

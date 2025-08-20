@@ -17,7 +17,13 @@ func main() {
 		week1.AllWeek1()
 	case 2:
 		week2.SelectResult()
-	
+	case 0:
+		username := week2.GetInfo()
+		_ = week2.CreateUsername(username)
+		err := week2.CheckUniqUsername(username)
+		if err != nil {
+			fmt.Println("err",err)
+			return
+		}
 	}
 }
-

@@ -7,3 +7,9 @@ type Person struct {
 	PhoneNumber string
 	Email       string
 }
+
+type Username struct {
+	DateTime    string
+	Username    string
+	PhoneNumber string
+}
