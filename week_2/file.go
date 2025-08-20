@@ -9,6 +9,7 @@ import (
 	"time"
 )
 
+//Get info from user and return Username struct.
 func GetInfo() common.Username {
 	var username string
 	var PhoneNumber string
@@ -25,6 +26,7 @@ func GetInfo() common.Username {
 	return un
 
 }
+
 //No need to use it, but maybe later.
 // func CreateUsernames(username common.Username) []common.Username {
 // 	var Usernames []common.Username
@@ -36,6 +38,7 @@ func GetInfo() common.Username {
 // 	return Usernames
 // }
 
+//read file anf returns data divided by | and error.
 func readFile() ([]string, error) {
 	fileName := "week_2/UserName.txt"
 
@@ -43,25 +46,27 @@ func readFile() ([]string, error) {
 	if err != nil {
 		return nil, err
 	}
+	// convert []byte to string and divided by | 
 	stringData := string(data)
 	splitStringData := strings.Split(stringData, "|")
 
 	return splitStringData, nil
 }
 
+//check user name and can write another validation.
 func CheckUniqUsername(unInfo common.Username) error {
 	data, err := readFile()
 	if err != nil {
 		return err
 	}
+	//check uniq username
 	for i := 1; i < len(data); i += 3 {
 		// fmt.Println(i ,data[i])
 		if strings.TrimSpace(data[i]) == unInfo.Username {
 			return errors.New("username used")
 		}
 	}
-	
-
+	//check uniq phone number
 	for i := 2; i < len(data); i += 3 {
 		// fmt.Println(i ,data[i])
 		if strings.TrimSpace(data[i]) == unInfo.PhoneNumber {
@@ -71,21 +76,24 @@ func CheckUniqUsername(unInfo common.Username) error {
 	return nil
 }
 
+// give struct Username and save in UserName.txt file . return error 
+// handling error for open and write in file .
 func SaveInFile(username common.Username) error {
 	fileName := "week_2/UserName.txt"
-
+	//create or open file and catch permission for read and write
 	file, err := os.OpenFile(fileName, os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
 	if err != nil {
 		return errors.Join(errors.New("we have error in open or create file"), err)
 
 	}
 	defer file.Close()
-
+	//convert struct to string and format
 	usernameString := fmt.Sprintf("%s|%s|%s|\n",
 		username.DateTime,
 		username.Username,
 		username.PhoneNumber)
 
+	//write in file 
 	_, err = file.WriteString(usernameString)
 	if err != nil {
 		return errors.Join(errors.New("we have error in Write file"), err)
