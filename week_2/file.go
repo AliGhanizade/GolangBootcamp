@@ -10,7 +10,7 @@ import (
 )
 
 //Get info from user and return Username struct.
-func GetInfo() common.Username {
+func getInfo() common.Username {
 	var username string
 	var PhoneNumber string
 	dateTime := time.Now().Format(time.DateTime)
@@ -54,7 +54,7 @@ func readFile() ([]string, error) {
 }
 
 //check user name and can write another validation.
-func CheckUniqUsername(unInfo common.Username) error {
+func checkUniqUsername(unInfo common.Username) error {
 	data, err := readFile()
 	if err != nil {
 		return err
@@ -78,7 +78,7 @@ func CheckUniqUsername(unInfo common.Username) error {
 
 // give struct Username and save in UserName.txt file . return error 
 // handling error for open and write in file .
-func SaveInFile(username common.Username) error {
+func saveInFile(username common.Username) error {
 	fileName := "week_2/UserName.txt"
 	//create or open file and catch permission for read and write
 	file, err := os.OpenFile(fileName, os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)

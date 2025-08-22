@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func CreateCountries() map[string]string {
+func createCountries() map[string]string {
 	Countries := map[string]string{
 		"France":       "Paris",
 		"Germany":      "Berlin",
@@ -41,7 +41,7 @@ func CreateCountries() map[string]string {
 	return Countries
 }
 
-func FindInMap(Countries map[string]string) string {
+func findInMap(Countries map[string]string) string {
 	var country string
 	fmt.Print("Write your Country :")
 	fmt.Scan(&country)

@@ -5,10 +5,8 @@ import (
 	"slices"
 )
 
-
-
 // create random int number (under 100) and append this to int slice
-func RandomNumberForSlice(Numbers []int) []int {
+func randomNumberForSlice(Numbers []int) []int {
 	var RandNumbers []int
 
 	for i := 0; i < 10; i++ {
@@ -21,7 +19,7 @@ func RandomNumberForSlice(Numbers []int) []int {
 }
 
 // Sum & Average
-func SumAndAverageSlice(Numbers []int) (int, float32) {
+func sumAndAverageSlice(Numbers []int) (int, float32) {
 	var sum int
 	var average float32
 
@@ -34,7 +32,7 @@ func SumAndAverageSlice(Numbers []int) (int, float32) {
 }
 
 // sum int slice and return int
-func AverageSlice(Numbers []int) float32 {
+func averageSlice(Numbers []int) float32 {
 	var sum int
 	var average float32
 
@@ -48,7 +46,7 @@ func AverageSlice(Numbers []int) float32 {
 }
 
 // sum int slice and return int
-func SumSlice(Numbers []int) int {
+func sumSlice(Numbers []int) int {
 	var sum int
 
 	for _, v := range Numbers {
@@ -61,7 +59,7 @@ func SumSlice(Numbers []int) int {
 
 //this func for week2 but for slice and i read this in this file
 
-func MinimumNumberInSlice(Numbers []int) int {
+func minimumNumberInSlice(Numbers []int) int {
 	min := 100
 	for _, v := range Numbers {
 		if v < min {
@@ -72,7 +70,7 @@ func MinimumNumberInSlice(Numbers []int) int {
 	// But we can use min:=slices.min(Numbers)
 }
 
-func MaximumNumberInSlice(Numbers []int) int {
+func maximumNumberInSlice(Numbers []int) int {
 	max := 0
 	for _, v := range Numbers {
 		if max < v {

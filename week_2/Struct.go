@@ -1,6 +1,6 @@
 package week_2
 
-type Person struct {
+type person struct {
 	ID          int
 	Name        string
 	Age         int
@@ -8,23 +8,23 @@ type Person struct {
 	Email       string
 }
 
-type Book struct {
+type book struct {
 	ID     uint
 	Title  string
-	Author Person
+	Author person
 	Year   int
 }
 
-func CreatePerson() []Person {
-	var Persons []Person
-	Persons = append(Persons, Person{
+func createPerson() []person {
+	var Persons []person
+	Persons = append(Persons, person{
 		ID:          1,
 		Name:        "ali",
 		Age:         17,
 		PhoneNumber: "+989052315520",
 		Email:       "MraliGhanizade@gmail.com",
 	})
-	Persons = append(Persons, Person{
+	Persons = append(Persons, person{
 		ID:          1,
 		Name:        "Reza",
 		Age:         25,
@@ -35,15 +35,15 @@ func CreatePerson() []Person {
 
 }
 
-func CreateBook(Authors []Person) []Book {
-	var Books []Book
-	Books = append(Books, Book{
+func createBook(Authors []person) []book {
+	var Books []book
+	Books = append(Books, book{
 		ID:     1,
 		Title:  "Book1",
 		Author: Authors[0],
 		Year:   2024,
 	})
-	Books = append(Books, Book{
+	Books = append(Books, book{
 		ID:     2,
 		Title:  "Book2",
 		Author: Authors[1],

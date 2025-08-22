@@ -5,18 +5,18 @@ import common "GolangBootcamp/common"
 func AllWeek1() {
 	var Numbers []int
 
-	Numbers = RandomNumberForSlice(Numbers)
+	Numbers = randomNumberForSlice(Numbers)
 	common.PrintByTime(Numbers)
 
-	Average := AverageSlice(Numbers)
+	Average := averageSlice(Numbers)
 	common.PrintByTime(Average)
 
-	Sum := SumSlice(Numbers)
+	Sum := sumSlice(Numbers)
 	common.PrintByTime(Sum)
 
-	min := MinimumNumberInSlice(Numbers)
-	max := MaximumNumberInSlice(Numbers)
-	common.PrintByTime(min,max)
+	min := minimumNumberInSlice(Numbers)
+	max := maximumNumberInSlice(Numbers)
+	common.PrintByTime(min, max)
 	/*
 		minBySlices := slices.Min(Numbers)
 		common.PrintByTime(minBySlices)

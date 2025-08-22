@@ -11,24 +11,24 @@ func SelectResult() {
 	fmt.Scan(&practice)
 	switch practice {
 	case 1:
-		Persons := CreatePerson()
+		Persons := createPerson()
 		common.PrintByTime(Persons)
 
-		Books := CreateBook(Persons)
+		Books := createBook(Persons)
 		common.PrintByTime(Books)
 	case 2:
-		countries := CreateCountries()
+		countries := createCountries()
 		common.PrintMapStringJustKey(countries)
-		capital := FindInMap(countries)
+		capital := findInMap(countries)
 		common.PrintByTime(capital)
 	case 3:
-		username := GetInfo()
-		err := CheckUniqUsername(username)
+		username := getInfo()
+		err := checkUniqUsername(username)
 		if err != nil {
 			// fmt.Println(err) 
 			return
 		}
-		err = SaveInFile(username)
+		err = saveInFile(username)
 		if err != nil {
 			// fmt.Println(err) 
 			return
@@ -41,24 +41,24 @@ func SelectResult() {
 }
 
 func AllWeek2() {
-	Persons := CreatePerson()
+	Persons := createPerson()
 	common.PrintByTime(Persons)
 
-	Books := CreateBook(Persons)
+	Books := createBook(Persons)
 	common.PrintByTime(Books)
 
-	countries := CreateCountries()
+	countries := createCountries()
 	// common.PrintMapString(Capital)
-	capital := FindInMap(countries)
+	capital := findInMap(countries)
 	common.PrintByTime(capital)
 
-	username := GetInfo()
-		err := CheckUniqUsername(username)
+	username := getInfo()
+		err := checkUniqUsername(username)
 		if err != nil {
 			// fmt.Println(err) 
 			return
 		}
-		err = SaveInFile(username)
+		err = saveInFile(username)
 		if err != nil {
 			// fmt.Println(err) 
 			return
