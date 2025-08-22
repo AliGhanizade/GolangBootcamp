@@ -1,0 +1,3 @@
+[submodule "mini_project/FizzBuzz"]
+	path = mini_project/FizzBuzz
+	url = https://github.com/AliGhanizade/FizzBuzz.git
