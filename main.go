@@ -3,6 +3,7 @@ package main
 import (
 	week1 "GolangBootcamp/week_1"
 	week2 "GolangBootcamp/week_2"
+	week3	"GolangBootcamp/week_3"
 	"fmt"
 )
 
@@ -17,7 +18,10 @@ func main() {
 		week1.AllWeek1()
 	case 2:
 		week2.SelectResult()
+	case 3:
+		week3.SelectResult()
 	case 0:
+		week1.AllWeek1()
 		
 	}
 }
