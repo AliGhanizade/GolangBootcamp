@@ -3,4 +3,4 @@
 	url = https://github.com/AliGhanizade/FizzBuzz.git
 [submodule "mini_project/Palindrome"]
 	path = mini_project/Palindrome
-	url = https://github.com/AliGhanizade/Palindrome
+	url = https://github.com/AliGhanizade/Palindrome.git
