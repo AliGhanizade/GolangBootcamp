@@ -10,3 +10,6 @@
 [submodule "mini_project/Calculator"]
 	path = mini_project/Calculator
 	url = https://github.com/AliGhanizade/CLI-Calculator.git
+[submodule "mini_project/MinMaxSlice"]
+	path = mini_project/MinMaxSlice
+	url = https://github.com/AliGhanizade/MinMaxSlice.git
