@@ -7,3 +7,6 @@
 [submodule "mini_project/Reverse-Array-String"]
 	path = mini_project/Reverse-Array-String
 	url = https://github.com/AliGhanizade/Reverse-Array-String.git
+[submodule "mini_project/Calculator"]
+	path = mini_project/Calculator
+	url = https://github.com/AliGhanizade/CLI-Calculator.git
