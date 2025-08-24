@@ -4,3 +4,6 @@
 [submodule "mini_project/Palindrome"]
 	path = mini_project/Palindrome
 	url = https://github.com/AliGhanizade/Palindrome.git
+[submodule "mini_project/Reverse-Array-String"]
+	path = mini_project/Reverse-Array-String
+	url = https://github.com/AliGhanizade/Reverse-Array-String.git
