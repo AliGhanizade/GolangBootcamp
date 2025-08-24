@@ -5,7 +5,7 @@ import common "GolangBootcamp/common"
 func AllWeek1() {
 	var Numbers []int
 
-	Numbers = randomNumberForSlice(Numbers)
+	Numbers = randomNumberForSlice()
 	common.PrintByTime(Numbers)
 
 	Average := averageSlice(Numbers)

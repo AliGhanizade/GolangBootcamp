@@ -6,7 +6,8 @@ import (
 )
 
 // create random int number (under 100) and append this to int slice
-func randomNumberForSlice(Numbers []int) []int {
+func randomNumberForSlice() []int {
+	var Numbers []int
 	var RandNumbers []int
 
 	for i := 0; i < 10; i++ {
