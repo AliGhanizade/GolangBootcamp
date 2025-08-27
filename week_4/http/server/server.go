@@ -11,6 +11,7 @@ func Run() {
 
 	mux.HandleFunc("/hello", hello)
 	mux.HandleFunc("/test", test)
+	mux.HandleFunc("/time", showTime)
 
 	server1 := &http.Server{
 		Addr:         ":8080",
@@ -22,7 +23,9 @@ func Run() {
 	if err != nil {
 		panic(err)
 	}
-	fmt.Println("server is up")
+}
+func showTime(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "time is : %s", time.Now().Format(time.DateTime))
 }
 
 func hello(w http.ResponseWriter, r *http.Request) {
