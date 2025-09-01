@@ -16,3 +16,6 @@
 [submodule "week_4/Todo"]
 	path = week_4/Todo
 	url = https://github.com/AliGhanizade/TodoCLI
+[submodule "mini_project/BookStore"]
+	path = mini_project/BookStore
+	url = https://github.com/AliGhanizade/BookStore.git
