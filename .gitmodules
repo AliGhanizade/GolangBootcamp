@@ -19,3 +19,7 @@
 [submodule "mini_project/BookStore"]
 	path = mini_project/BookStore
 	url = https://github.com/AliGhanizade/BookStore.git
+[submodule "week_4/book_store_by_slice"]
+	path = week_4/book_store_by_slice
+	url = https://github.com/AliGhanizade/BookStore.git
+	branch = slice
