@@ -10,17 +10,20 @@ func SelectResult() {
 	fmt.Print("Write Number of practice 1-struct 2-map 3-SaveInFile 0-All:")
 	fmt.Scan(&practice)
 	switch practice {
+
 	case 1:
 		Persons := createPerson()
 		common.PrintByTime(Persons)
 
 		Books := createBook(Persons)
 		common.PrintByTime(Books)
+
 	case 2:
 		countries := createCountries()
 		common.PrintMapStringJustKey(countries)
 		capital := findInMap(countries)
 		common.PrintByTime(capital)
+		
 	case 3:
 		username := getInfo()
 		err := checkUniqUsername(username)
@@ -33,9 +36,8 @@ func SelectResult() {
 			// fmt.Println(err) 
 			return
 		}
-		
-
-	case 4:
+	
+	case 0:
 		AllWeek2()
 	}
 }
