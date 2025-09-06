@@ -43,7 +43,6 @@ func averageSlice(Numbers []int) float32 {
 	average = float32(sum) / float32(len(Numbers))
 
 	return average
-
 }
 
 // sum int slice and return int
@@ -55,7 +54,6 @@ func sumSlice(Numbers []int) int {
 	}
 
 	return sum
-
 }
 
 //this func for week2 but for slice and i read this in this file
