@@ -23,3 +23,6 @@
 	path = week_4/book_store_by_slice
 	url = https://github.com/AliGhanizade/BookStore.git
 	branch = slice
+[submodule "week_1/Calculator"]
+	path = week_1/Calculator
+	url = https://github.com/AliGhanizade/CLI-Calculator.git
