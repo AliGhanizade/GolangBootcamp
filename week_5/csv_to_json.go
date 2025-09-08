@@ -8,22 +8,34 @@ import (
 	"os"
 )
 
-func csvToJson(w http.ResponseWriter, r *http.Request) {
+func handlerCSV(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodGet {
+		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
+	jsonData := csvToJson()
+	if jsonData == nil {
+		http.Error(w, "Error processing CSV", http.StatusInternalServerError)
+		return
+	}
+	w.Header().Set("Content-Type", "application/json")
+	w.Write(jsonData)
+}
+
+func csvToJson() []byte {
 	fileName := "../week_5/data.csv"
 
 	csvFile, err := os.Open(fileName)
 	if err != nil {
 		fmt.Println("Error opening file:", err)
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		return
+		return nil
 	}
 	defer csvFile.Close()
 
 	csvrecord, err := csv.NewReader(csvFile).ReadAll()
 	if err != nil {
 		fmt.Println("Error reading CSV:", err)
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		return
+		return nil
 	}
 
 	var persons []map[string]string
@@ -40,20 +52,21 @@ func csvToJson(w http.ResponseWriter, r *http.Request) {
 	jsonData, err := json.Marshal(persons)
 	if err != nil {
 		fmt.Println("Error converting to JSON:", err)
-		http.Error(w, err.Error(), http.StatusInternalServerError)
-		return
+		return nil
 	}
+	return jsonData
 
+}
+
+func saveInJsonFile(jsonData []byte) {
 	jsonFile, err := os.OpenFile("../week_5/data.json", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0644)
 	if err != nil {
 		fmt.Println("Error creating JSON file:", err)
-		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
 	defer jsonFile.Close()
 
 	jsonFile.Write(jsonData)
 	fmt.Println("CSV data successfully converted to JSON and saved to data.json")
-	w.Header().Set("Content-Type", "application/json")
-	w.Write(jsonData)
+	return
 }
