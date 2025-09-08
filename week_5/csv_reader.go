@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-func ReadCSV()  {
+func readCSV()  {
 	fileName := "../week_5/data.csv"
 	file, err := os.Open(fileName)
 	if err != nil {
