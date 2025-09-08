@@ -1,4 +1,4 @@
-package server
+package week_4
 
 import (
 	"fmt"
