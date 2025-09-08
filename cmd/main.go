@@ -4,6 +4,8 @@ import (
 	week1 "GolangBootcamp/week_1"
 	week2 "GolangBootcamp/week_2"
 	week3 "GolangBootcamp/week_3"
+	week4 "GolangBootcamp/week_4"
+	week5 "GolangBootcamp/week_5"
 	"fmt"
 )
 
@@ -20,7 +22,11 @@ func main() {
 		week2.SelectResult()
 	case 3:
 		week3.SelectResult()
-	case 0:
-		
+	case 4:
+		week4.Run()
+	case 5:
+		week5.SelectResult()
+	default:
+		fmt.Println("Invalid week number. Please enter a number.")
 	}
 }
