@@ -40,7 +40,7 @@ func getInfo() common.Username {
 
 //read file anf returns data divided by | and error.
 func readFile() ([]string, error) {
-	fileName := "week_2/UserName.txt"
+	fileName := "../week_2/UserName.txt"
 
 	data, err := os.ReadFile(fileName)
 	if err != nil {
@@ -79,7 +79,7 @@ func checkUniqUsername(unInfo common.Username) error {
 // give struct Username and save in UserName.txt file . return error 
 // handling error for open and write in file .
 func saveInFile(username common.Username) error {
-	fileName := "week_2/UserName.txt"
+	fileName := "../week_2/UserName.txt"
 	//create or open file and catch permission for read and write
 	file, err := os.OpenFile(fileName, os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
 	if err != nil {
