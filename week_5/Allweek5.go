@@ -1,6 +1,9 @@
 package week_5
 
-import "fmt"
+import (
+	"GolangBootcamp/common"
+	"fmt"
+)
 
 func SelectResult()  {
 	var practice int
@@ -10,6 +13,7 @@ func SelectResult()  {
 	1-2 on route /csv -> convert csv to json
 2-print csv file
 3-convert csv to json and save in file data.json
+4-log reader and count total request and successful request (status 200)
 `
 	fmt.Print(msg)
 	fmt.Scan(&practice)
@@ -21,6 +25,22 @@ func SelectResult()  {
 	case 3:
 		jsonData := csvToJson()
 		saveInJsonFile(jsonData)
+	case 4:
+		countLogAccess()
+		countLogError()
+		logA := countLogAccess()
+		logE := countLogError()
+		saveData(&common.LogReader{
+			TotalRequests: logA.TotalRequests,
+			GET:           logA.GET,
+			POST:          logA.POST,
+			PUT:           logA.PUT,
+			DELETE:        logA.DELETE,
+			Error:         logE.Error,
+			Alert:         logE.Alert,
+			Warn:          logE.Warn,
+			Crit:          logE.Crit,
+		})
 	default:
 		fmt.Println("Invalid practice number. Please enter a valid number.")
 	}
