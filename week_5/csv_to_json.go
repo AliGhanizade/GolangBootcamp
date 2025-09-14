@@ -59,7 +59,7 @@ func csvToJson() []byte {
 }
 
 func saveInJsonFile(jsonData []byte) {
-	jsonFile, err := os.OpenFile("../week_5/data.json", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0644)
+	jsonFile, err := os.OpenFile("../week_5/csvTojson.json", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0644)
 	if err != nil {
 		fmt.Println("Error creating JSON file:", err)
 		return
