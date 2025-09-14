@@ -1,0 +1,11 @@
+{
+	"GET": 77,
+	"POST": 14,
+	"DELETE": 7,
+	"UPDATE": 7,
+	"error": 65,
+	"alert": 8,
+	"warn": 16,
+	"crit": 16,
+	"total_requests": 105
+}
