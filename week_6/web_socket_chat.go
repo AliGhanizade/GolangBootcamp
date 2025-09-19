@@ -39,9 +39,17 @@ func handleConnections(w http.ResponseWriter, r *http.Request) {
 			log.Println("err in unmarshal ", err)
 			return
 		}
+		if m.Username == "" {
+			log.Println("empty username")
+			return
+		}
 		m.DateTime = time.Now().Format(time.DateTime)
-		broadcast <- m
 		
+		broadcast <- m
+
+		m.Username = ""
+		m.Message = ""
+		m.DateTime = ""
 	}
 }
 

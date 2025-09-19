@@ -19,7 +19,9 @@ func echoWebSocketHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	defer conn.Close()
-	 u := struct{Message string `json:"message"`}{}
+	
+	u := struct{Message string `json:"message"`}{}
+
 	for {
 		_, msg, err := conn.ReadMessage()
 		if err != nil {
