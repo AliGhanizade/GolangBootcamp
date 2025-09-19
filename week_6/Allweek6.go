@@ -8,7 +8,7 @@ import (
 
 func SelectResult() {
 	var practice int
-	println("Write Number of practice 1-web craweler 0-All:")
+	fmt.Print("Write Number of practice :\n\t1-web crawler \n\t2-web socket echo \n\t3-web socket chat \n")
 	fmt.Scan(&practice)
 	switch practice {
 
@@ -18,7 +18,9 @@ func SelectResult() {
 		go getWebLink(&wg)
 		go getWebTitle(&wg)
 		wg.Wait()
-	case 0:
-		
+	case 2:
+		StartWebSocketEchoServer()
+	case 3 : 
+		StartChatServer()
 	}
 }

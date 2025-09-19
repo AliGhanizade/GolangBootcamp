@@ -27,7 +27,7 @@ func main() {
 		week4.Run()
 	case 5:
 		week5.SelectResult()
-		case 6:
+	case 6:
 		week6.SelectResult()
 	default:
 		fmt.Println("Invalid week number. Please enter a number.")
