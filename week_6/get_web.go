@@ -17,11 +17,11 @@ func getWebTitle(wg *sync.WaitGroup) {
 	defer response.Body.Close()
 	body := response.Body
 
-	reTiltle := regexp.MustCompile(`<title>(.*?)</title>`)
+	reTitle := regexp.MustCompile(`<title>(.*?)</title>`)
 	scanner := bufio.NewScanner(body)
 	for scanner.Scan() {
 		line := scanner.Text()
-		title := reTiltle.FindStringSubmatch(line)
+		title := reTitle.FindStringSubmatch(line)
 		if len(title) > 1 {
 			fmt.Println("Title of the web page is:", title[1])
 
