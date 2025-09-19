@@ -1,7 +1,6 @@
 package week_6
 
 import (
-	"GolangBootcamp/common"
 	"encoding/json"
 	"log"
 	"net/http"
@@ -14,13 +13,13 @@ var loader = websocket.Upgrader{
 }
 
 func echoWebSocketHandler(w http.ResponseWriter, r *http.Request) {
-	conn, err := loader.Upgrade(w, r, responseHeder(w, r))
+	conn, err := loader.Upgrade(w, r, responseHeder(w))
 	if err != nil {
 		log.Println("error in connection ", err)
 		return
 	}
 	defer conn.Close()
-	var u common.Username
+	 u := struct{Message string `json:"message"`}{}
 	for {
 		_, msg, err := conn.ReadMessage()
 		if err != nil {
@@ -33,7 +32,7 @@ func echoWebSocketHandler(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 
-		log.Printf("Received user : %+v\n", u)
+		log.Printf("Received user : %+v\n", u.Message)
 
 		err = conn.WriteJSON(u)
 		if err != nil {
@@ -50,7 +49,7 @@ func StartWebSocketEchoServer() {
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
 
-func responseHeder(w http.ResponseWriter, r *http.Request) http.Header {
+func responseHeder(w http.ResponseWriter) http.Header {
 	w.Header().Add("Content-Type", "application/json")
 	w.Header().Add("web-socket-Created", "Ali")
 	return w.Header()
