@@ -5,7 +5,7 @@ type Person struct {
 	Name        string `json:"name"`
 	Age         int    `json:"age"`
 	PhoneNumber string `json:"phone_number"`
-	Email       string `jsom:"email,omitempty"`
+	Email       string `json:"email,omitempty"`
 }
 
 type Username struct {
@@ -25,3 +25,9 @@ type LogReader struct {
 	Crit int `json:"crit"`
 	TotalRequests int `json:"total_requests"`
 }	
+
+type MessageWebSocket struct {
+	Message  string `json:"message"`
+	Username string `json:"username"`
+	DateTime string `json:"date_time"`
+}
