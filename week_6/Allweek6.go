@@ -8,7 +8,7 @@ import (
 
 func SelectResult() {
 	var practice int
-	fmt.Print("Write Number of practice :\n\t1-web crawler \n\t2-web socket echo \n\t3-web socket chat \n")
+	fmt.Print("Write Number of practice :\n\t1-web crawler \n\t2-web socket echo \n\t3-web socket chat \n\t4-url shortener in map\n")
 	fmt.Scan(&practice)
 	switch practice {
 
@@ -22,5 +22,7 @@ func SelectResult() {
 		StartWebSocketEchoServer()
 	case 3 : 
 		StartChatServer()
+	case 4 :
+		StartURLShortener()
 	}
 }
