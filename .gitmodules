@@ -13,9 +13,6 @@
 [submodule "mini_project/MinMaxSlice"]
 	path = mini_project/MinMaxSlice
 	url = https://github.com/AliGhanizade/MinMaxSlice.git
-[submodule "week_4/Todo"]
-	path = week_4/Todo
-	url = https://github.com/AliGhanizade/TodoCLI
 [submodule "mini_project/BookStore"]
 	path = mini_project/BookStore
 	url = https://github.com/AliGhanizade/BookStore.git
@@ -26,3 +23,6 @@
 [submodule "week_1/Calculator"]
 	path = week_1/Calculator
 	url = https://github.com/AliGhanizade/CLI-Calculator.git
+[submodule "mini_project/Todo"]
+	path = mini_project/Todo
+	url = https://github.com/AliGhanizade/Todo.git
