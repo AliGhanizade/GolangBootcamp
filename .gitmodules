@@ -1,25 +1,6 @@
-[submodule "mini_project/FizzBuzz"]
-	path = mini_project/FizzBuzz
-	url = https://github.com/AliGhanizade/FizzBuzz.git
-[submodule "mini_project/Palindrome"]
-	path = mini_project/Palindrome
-	url = https://github.com/AliGhanizade/Palindrome.git
-[submodule "mini_project/Reverse-Array-String"]
-	path = mini_project/Reverse-Array-String
-	url = https://github.com/AliGhanizade/Reverse-Array-String.git
-[submodule "mini_project/Calculator"]
-	path = mini_project/Calculator
-	url = https://github.com/AliGhanizade/CLI-Calculator.git
-[submodule "mini_project/MinMaxSlice"]
-	path = mini_project/MinMaxSlice
-	url = https://github.com/AliGhanizade/MinMaxSlice.git
 [submodule "mini_project/BookStore"]
 	path = mini_project/BookStore
 	url = https://github.com/AliGhanizade/BookStore.git
-[submodule "week_4/book_store_by_slice"]
-	path = week_4/book_store_by_slice
-	url = https://github.com/AliGhanizade/BookStore.git
-	branch = slice
 [submodule "week_1/Calculator"]
 	path = week_1/Calculator
 	url = https://github.com/AliGhanizade/CLI-Calculator.git
