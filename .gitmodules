@@ -1,9 +1,21 @@
-[submodule "mini_project/BookStore"]
-	path = mini_project/BookStore
-	url = https://github.com/AliGhanizade/BookStore.git
 [submodule "week_1/Calculator"]
 	path = week_1/Calculator
 	url = https://github.com/AliGhanizade/CLI-Calculator.git
-[submodule "mini_project/Todo"]
-	path = mini_project/Todo
-	url = https://github.com/AliGhanizade/Todo.git
+[submodule "algorithm/pwtools"]
+	path = algorithm/pwtools
+	url = https://github.com/AliGhanizade/pwtools.git
+[submodule "algorithm/MinMaxSlice"]
+	path = algorithm/MinMaxSlice
+	url = https://github.com/AliGhanizade/MinMaxSlice.git
+[submodule "algorithm/Palindorm"]
+	path = algorithm/Palindorm
+	url = https://github.com/AliGhanizade/Palindrome.git
+[submodule "algorithm/FizzBuzz"]
+	path = algorithm/FizzBuzz
+	url = https://github.com/AliGhanizade/FizzBuzz.git
+[submodule "algorithm/ReverseArrayString"]
+	path = algorithm/ReverseArrayString
+	url = https://github.com/AliGhanizade/Reverse-Array-String.git
+[submodule "algorithm/Calculator"]
+	path = algorithm/Calculator
+	url = https://github.com/AliGhanizade/mathx.git
