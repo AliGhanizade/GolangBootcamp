@@ -19,3 +19,19 @@
 [submodule "algorithm/Calculator"]
 	path = algorithm/Calculator
 	url = https://github.com/AliGhanizade/mathx.git
+[submodule "mini_project/Todo/sqlite"]
+	path = mini_project/Todo/sqlite
+	url = https://github.com/AliGhanizade/Todo.git
+	branch = sqlite
+[submodule "mini_project/Todo/master"]
+	path = mini_project/Todo/master
+	url = https://github.com/AliGhanizade/Todo.git
+	branch = master
+[submodule "mini_project/BookStore/master"]
+	path = mini_project/BookStore/master
+	url = https://github.com/AliGhanizade/BookStore.git
+	branch = master
+[submodule "mini_project/BookStore/refactor"]
+	path = mini_project/BookStore/refactor
+	url = https://github.com/AliGhanizade/BookStore.git
+	branch = refactor
